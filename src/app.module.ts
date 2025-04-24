@@ -6,6 +6,7 @@ import { ApiClientModule } from './api-client/api-client.module';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AuthEntity } from './auth/entities/auth.entity';
+import { SmartBillModule } from './smart-bill/smart-bill.module';
 
 @Module({
   imports: [
@@ -23,6 +24,7 @@ import { AuthEntity } from './auth/entities/auth.entity';
     }),
     AuthModule,
     ApiClientModule,
+    SmartBillModule,
   ],
   controllers: [AppController],
   providers: [AppService],
