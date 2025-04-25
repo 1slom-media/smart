@@ -1,4 +1,4 @@
-import { Body, Controller, Param, Post, Put } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post, Put } from '@nestjs/common';
 import { ApiOperation, ApiTags } from '@nestjs/swagger';
 import { SmartBillService } from './smart-bill.service';
 import {
@@ -34,7 +34,7 @@ export class SmartBillController {
   }
 
   @ApiOperation({ summary: 'Get order' })
-  @Put('/get-order/:id')
+  @Get('/get-order/:id')
   async getOrder(@Param('id') id: string) {
     return this.smartBill.getOrderById(id);
   }
